@@ -1,0 +1,11 @@
+.gridContainer {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 10px;
+  grid-template-rows: repeat(10, 1fr);
+  row-gap: 10px;
+  grid-auto-flow: dense;
+  padding: 20px;
+}

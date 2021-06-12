@@ -1,0 +1,27 @@
+.userVideo {
+  grid-column: 1/13;
+  grid-row: 1/11;
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://images.unsplash.com/photo-1607108003066-7728a0b79977?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.myVideo {
+  grid-column: 1/13;
+  grid-row: 8/11;
+  height: 100%;
+  width: 20%;
+  justify-self: end;
+  align-self: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: green;
+  border-radius: 17px;
+}
