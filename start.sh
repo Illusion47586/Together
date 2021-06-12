@@ -5,9 +5,11 @@ echo "-----"
 echo "Installing local client dependencies"
 echo "-----"
 npm i
+echo "-----"
 echo "Installing global client dependencies"
 echo "-----"
 npm i -g postcss postcss-cli autoprefixer
+echo "-----"
 echo "We are inside server folder"
 echo "-----"
 cd ../server
