@@ -1,16 +1,32 @@
 import { motion } from "framer-motion";
-import React, { Fragment, useRef } from "react";
+import React, { Fragment, useContext, useEffect, useRef } from "react";
 
 import VideoController from "./VideoController";
 
 import classes from "../styles/css/components/video.module.css";
+import { SocketContext } from "../contexts/SocketContext";
 
 const Video = () => {
   const constraintsRef = useRef(null);
+  const { callAccepted, myVideo, userVideo, callEnded, stream, setStream } =
+    useContext(SocketContext);
+
+  useEffect(() => {
+    if (navigator.mediaDevices)
+      navigator.mediaDevices
+        .getUserMedia({ video: true, audio: true })
+        .then((currentStream) => {
+          setStream(currentStream);
+          myVideo.current.srcObject = currentStream;
+        });
+  }, [myVideo, setStream]);
+
   return (
     <Fragment>
       <motion.div className={classes.userVideo} ref={constraintsRef}>
-        USER
+        {callAccepted && !callEnded && (
+          <video playsInline muted ref={userVideo} autoPlay />
+        )}
       </motion.div>
       <motion.div
         className={classes.myVideo}
@@ -18,9 +34,12 @@ const Video = () => {
         drag={true}
         dragConstraints={constraintsRef}
       >
-        ME
+        {stream && <video playsInline muted ref={myVideo} autoPlay />}
       </motion.div>
-      <VideoController constraintsRef={constraintsRef} />
+
+      {callAccepted && !callEnded && (
+        <VideoController constraintsRef={constraintsRef} />
+      )}
     </Fragment>
   );
 };

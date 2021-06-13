@@ -1,0 +1,24 @@
+.createMeeting {
+  color: black;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.createMeeting div {
+  padding: 15px 20px;
+  border-radius: 10px;
+  width: 70%;
+  font-size: 1em;
+  scroll-behavior: smooth;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+@media (max-width: 1200px) {
+  .createMeeting {
+    width: 100%;
+    height: 50%;
+  }
+}

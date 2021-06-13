@@ -1,0 +1,64 @@
+@use '../abstracts/mixins';
+
+.box {
+  padding: 10px 20px;
+  width: min-content;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 0;
+  background-color: #e5e5e565;
+  color: #000;
+  z-index: 1;
+  border-radius: 10px;
+  @include mixins.center;
+
+  button {
+    margin: 0;
+    margin-left: 1em;
+    transform: translate(0);
+    box-shadow: none;
+    border: none;
+
+    &:hover,
+    &:active,
+    &:visited {
+      border: none;
+    }
+
+    &.green {
+      color: lime;
+
+      &:hover,
+      &:active,
+      &:visited {
+        background-color: lime;
+        color: white;
+      }
+    }
+
+    &.red {
+      color: red;
+
+      &:hover,
+      &:active,
+      &:visited {
+        background-color: red;
+        color: white;
+      }
+    }
+
+    &.mute {
+      color: black;
+
+      &:hover,
+      &:active,
+      &:visited {
+        background-color: #e5e5e5;
+        color: red;
+      }
+    }
+  }
+}

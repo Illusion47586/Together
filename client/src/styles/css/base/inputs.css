@@ -1,0 +1,64 @@
+button {
+  margin-top: 2em;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+  -o-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+  border: 1px solid orange;
+  box-shadow: 5px 5px orange;
+  background-color: #fff;
+  transform: translate(-5px, -5px);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+button span {
+  margin-right: 10px;
+}
+button:active, button:visited {
+  background-color: orange;
+  color: white;
+  transform: translateY(0);
+  box-shadow: 0 0 transparent;
+}
+button.btn-white {
+  background-color: white;
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.6);
+}
+button.btn-white:active, button.btn-white:visited {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  transform: translateY(0);
+  box-shadow: 0 0 transparent;
+}
+
+@media (max-width: 1200px) {
+  button {
+    padding: 15px 25px;
+    font-size: 1.1em;
+  }
+}
+input[type=text] {
+  padding: 15px 20px;
+  border-radius: 10px;
+  width: 70%;
+  font-size: 1em;
+  scroll-behavior: smooth;
+  border: 1.5px solid #d8d8d8;
+}
+
+@media (max-width: 1200px) {
+  input[type=text] {
+    padding: 18px 25px;
+    width: 80%;
+    font-size: 1.1em;
+  }
+}

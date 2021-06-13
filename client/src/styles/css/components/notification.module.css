@@ -1,0 +1,48 @@
+.box {
+  padding: 10px 20px;
+  width: min-content;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 0;
+  background-color: #e5e5e565;
+  color: #000;
+  z-index: 1;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box button {
+  margin: 0;
+  margin-left: 1em;
+  transform: translate(0);
+  box-shadow: none;
+  border: none;
+}
+.box button:hover, .box button:active, .box button:visited {
+  border: none;
+}
+.box button.green {
+  color: lime;
+}
+.box button.green:hover, .box button.green:active, .box button.green:visited {
+  background-color: lime;
+  color: white;
+}
+.box button.red {
+  color: red;
+}
+.box button.red:hover, .box button.red:active, .box button.red:visited {
+  background-color: red;
+  color: white;
+}
+.box button.mute {
+  color: black;
+}
+.box button.mute:hover, .box button.mute:active, .box button.mute:visited {
+  background-color: #e5e5e5;
+  color: red;
+}

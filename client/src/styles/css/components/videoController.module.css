@@ -16,3 +16,8 @@
     backdrop-filter: blur(12px);
   }
 }
+@media (max-width: 1200px) {
+  .controller {
+    grid-column: 1/6;
+  }
+}

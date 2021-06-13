@@ -4,9 +4,14 @@ html,
   line-height: 22px;
 }
 
-body,
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 1em;
+  line-height: 1.375em;
+}
+
 .article {
-  font-family: sans-serif;
+  font-family: "Manrope", sans-serif;
   font-size: 1em;
   line-height: 1.375em;
   max-width: 560px;

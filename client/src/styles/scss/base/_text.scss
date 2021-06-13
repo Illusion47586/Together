@@ -1,0 +1,16 @@
+input[type="text"] {
+  padding: 15px 20px;
+  border-radius: 10px;
+  width: 70%;
+  font-size: 1em;
+  scroll-behavior: smooth;
+  border: 1.5px solid #d8d8d8;
+}
+
+@media (max-width: 1200px) {
+  input[type="text"] {
+    padding: 18px 25px;
+    width: 80%;
+    font-size: 1.1em;
+  }
+}

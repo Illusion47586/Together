@@ -1,0 +1,15 @@
+@use '../abstracts/mixins';
+
+.joinMeeting {
+  width: 50%;
+  background-color: #fff;
+  @include mixins.center;
+  flex-direction: column;
+}
+
+@media (max-width: 1200px) {
+  .joinMeeting {
+    width: 100%;
+    height: 50%;
+  }
+}
