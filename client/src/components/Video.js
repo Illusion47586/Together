@@ -25,7 +25,7 @@ const Video = () => {
     <Fragment>
       <motion.div className={classes.userVideo} ref={constraintsRef}>
         {callAccepted && !callEnded && (
-          <video playsInline muted ref={userVideo} autoPlay />
+          <video playsInline ref={userVideo} autoPlay />
         )}
       </motion.div>
       <motion.div
@@ -34,7 +34,7 @@ const Video = () => {
         drag={true}
         dragConstraints={constraintsRef}
       >
-        {stream && <video playsInline muted ref={myVideo} autoPlay />}
+        {stream && <video playsInline ref={myVideo} autoPlay />}
       </motion.div>
 
       {callAccepted && !callEnded && (
