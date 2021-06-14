@@ -34,7 +34,7 @@ const Video = () => {
         drag={true}
         dragConstraints={constraintsRef}
       >
-        {stream && <video playsInline ref={myVideo} autoPlay />}
+        {stream && <video playsInline muted ref={myVideo} autoPlay />}
       </motion.div>
 
       {callAccepted && !callEnded && (
