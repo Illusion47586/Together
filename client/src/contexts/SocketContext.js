@@ -87,7 +87,7 @@ const SocketContextProvider = ({ children }) => {
   const leaveCall = () => {
     setCallEnded(true);
     connectionRef.current.destroy();
-    window.location.reload();
+    window.location.replace("/");
   };
 
   return (

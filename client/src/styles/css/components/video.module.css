@@ -26,7 +26,7 @@
 
 video {
   height: 100%;
-  object-fit: fill;
+  object-fit: contain;
 }
 
 @media (max-width: 1200px) {

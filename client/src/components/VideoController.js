@@ -3,8 +3,14 @@ import useWindowDimensions from "../hooks/windowDimensions";
 
 import classes from "../styles/css/components/videoController.module.css";
 
+import { PhoneDisconnect } from "phosphor-react";
+import { useContext } from "react";
+import { SocketContext } from "../contexts/SocketContext";
+
 const VideoController = (props) => {
+  const { leaveCall } = useContext(SocketContext);
   const { width } = useWindowDimensions();
+
   return (
     <motion.div
       className={classes.controller}
@@ -12,7 +18,13 @@ const VideoController = (props) => {
       drag={true}
       dragConstraints={props.constraintsRef}
     >
-      hello
+      <button
+        onClick={() => {
+          leaveCall();
+        }}
+      >
+        <PhoneDisconnect />
+      </button>
     </motion.div>
   );
 };
