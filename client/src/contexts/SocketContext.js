@@ -78,6 +78,7 @@ const SocketContextProvider = ({ children }) => {
 
     socket.on("callAccepted", (signal) => {
       setCallAccepted(true);
+      console.log("accepted");
       peer.signal(signal);
     });
 
